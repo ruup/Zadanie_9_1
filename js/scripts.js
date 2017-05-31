@@ -1,10 +1,11 @@
-
-function winPrompt() {
-    var a = prompt('Podaj długośc boku', 'np 4');
-    var h = prompt('Podaj wysokość', 'np 5');
-    var triangleArea = a*h/2;
-    console.log('Triangle field with base a: ' + a + ' and height h: ' + h + ' is equal to: ' + triangleArea);
+function getTriangleArea(a, h) {
+    if ((a > 0) && (h > 0)) {
+        return a* h / 2;
+    } else {
+        return "Nieprawidłowe dane" ;   
+    }
 }
-document.getElementById('prompt').addEventListener('click', function() {
-     winPrompt()
-});
+var triangle1Area = getTriangleArea(0, 0);
+var triangle2Area = getTriangleArea(22, 2);
+var triangle3Area = getTriangleArea(1, 22);
+console.log(triangle1Area, triangle2Area, triangle3Area);
